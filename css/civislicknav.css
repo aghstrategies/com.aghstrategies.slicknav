@@ -18,6 +18,10 @@
     height: auto;
     width: 100% !important;
   }
+  #civicrm-menu.crm-slickmenu-open {
+    position: absolute !important;
+    top: 0;
+  }
 	.slicknav_menu {
 		display:block;
 	}

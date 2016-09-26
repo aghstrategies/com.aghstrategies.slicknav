@@ -9,7 +9,15 @@ CRM.$(function($) {
     openedSymbol:'&#xf078;',
     closedSymbol: '&#xf054;',
     appendTo: '#civicrm-menu',
-    closeOnClick: 'true'
+    closeOnClick: 'true',
+    beforeOpen: function() {
+      window.scrollTo(0, 0);
+      $('#civicrm-menu').addClass('crm-slickmenu-open');
+
+    },
+    beforeClose: function() {
+      $('#civicrm-menu').removeClass('crm-slickmenu-open');
+    }
   });
 });
 {/literal}
