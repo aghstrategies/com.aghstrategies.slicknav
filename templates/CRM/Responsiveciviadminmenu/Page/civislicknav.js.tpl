@@ -4,7 +4,6 @@ CRM.$(function($) {
   var navMarkup = {/literal}{$navigation|@json_encode}{literal};
   $('<ul>' + navMarkup + '</ul>').slicknav({
     label: '',
-    duration: 1000,
     removeClasses: 'true',
     removeStyles: 'true',
     // openedSymbol:'fa fa-shield',

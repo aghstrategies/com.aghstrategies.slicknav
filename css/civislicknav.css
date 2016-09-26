@@ -15,13 +15,23 @@ li.slicknav_collapsed.slicknav_parent:nth-child(2) {
 }
 
 @media screen and (max-width: 40em) {
-.menumain:not(#crm-qsearch):not(.crm-link-home) {
-  display: none;
-}
+  .menumain:not(#crm-qsearch) {
+    display: none;
+  }
   #civicrm-menu {
     height: auto;
+    width: 100% !important;
   }
 	.slicknav_menu {
 		display:block;
 	}
+  #civicrm-menu #crm-qsearch input {
+    height: 2em;
+    margin-top: .5em;
+    width: 12em !important;
+    border-radius: 2px;
+  }
+  #root-menu-div div.outerbox {
+    margin-top: 18px !important;
+  }
 }
