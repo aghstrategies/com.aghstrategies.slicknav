@@ -1,5 +1,8 @@
-CRM.$(function ($) {
-  $('#civicrm-menu').slicknav({
+// <script> Generated {$smarty.now|date_format:'%d %b %Y %H:%M:%S'}
+{literal}
+CRM.$(function($) {
+  var navMarkup = {/literal}{$navigation|@json_encode}{literal};
+  $('<ul>' + navMarkup + '</ul>').slicknav({
     label: '',
     duration: 1000,
     removeClasses: 'true',
@@ -12,6 +15,7 @@ CRM.$(function ($) {
     // allowParentLinks: 'TRUE',
     // nestedParentLinks: 'true',
     // easingOpen: 'easeOutBounce',
-    closeOnClick: 'true',
+    closeOnClick: 'true'
   });
 });
+{/literal}

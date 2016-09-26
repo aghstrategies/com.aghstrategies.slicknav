@@ -1,10 +1,36 @@
 <?php
 
 require_once 'responsiveciviadminmenu.civix.php';
-CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.responsiveciviadminmenu', 'js/jquery.slicknav.js', 0, 'html-header');
-CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.responsiveciviadminmenu', 'js/slicknav.js');
-CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.responsiveciviadminmenu', 'css/slicknav.css');
-CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.responsiveciviadminmenu', 'css/civislicknav.css');
+
+/**
+ * Adds js/css for the slicknav menu
+ *
+ * @param $list
+ * @param $region
+ */
+function responsiveciviadminmenu_civicrm_coreResourceList($list, $region) {
+  $config = CRM_Core_Config::singleton();
+  //check if logged in user has access CiviCRM permission and build menu
+  $buildNavigation = !CRM_Core_Config::isUpgradeMode() && CRM_Core_Permission::check('access CiviCRM');
+  if (defined('CIVICRM_DISABLE_DEFAULT_MENU') || $config->userFrameworkFrontend) {
+    $buildNavigation = FALSE;
+  }
+  if ($buildNavigation && $region == 'html-header') {
+    $contactID = CRM_Core_Session::getLoggedInContactID();
+    if ($contactID) {
+      CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.responsiveciviadminmenu', 'slicknav/dist/jquery.slicknav.min.js', 0, 'html-header');
+      CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.responsiveciviadminmenu', 'slicknav/dist/slicknav.min.css');
+      CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.responsiveciviadminmenu', 'css/civislicknav.css');
+
+      // These params force the browser to refresh the js file when switching user, domain, or language
+      $lang = CRM_Core_I18n::getLocale();
+      $domain = CRM_Core_Config::domainID();
+      $key = CRM_Core_BAO_Navigation::getCacheKey($contactID);
+      $src = CRM_Utils_System::url("civicrm/ajax/responsiveadminmenu/$contactID/$lang/$domain/$key");
+      CRM_Core_Resources::singleton()->addScriptUrl($src);
+    }
+  }
+}
 
 /**
  * Implements hook_civicrm_config().
