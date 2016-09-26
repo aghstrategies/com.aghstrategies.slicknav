@@ -1,11 +1,10 @@
 This Extension
 --------------
 
-http://slicknav.com/
+Uses the jquery plugin [slicknav](http://slicknav.com/) to make the CiviCRM administration menu web responsive on mobile.
+
 
 
 Things to do:
 
-+ use font awesome chevron arrows for open and close
-+ style slightly
 + get width of menu div on resize and compare to window.

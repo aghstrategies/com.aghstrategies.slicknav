@@ -6,9 +6,8 @@ CRM.$(function($) {
     label: '',
     removeClasses: 'true',
     removeStyles: 'true',
-    // openedSymbol:'fa fa-shield',
-    // closedSymbol: '&#xf078;',
-    // removeIds: 'true',
+    openedSymbol:'&#xf078;',
+    closedSymbol: '&#xf054;',
     appendTo: '#civicrm-menu',
     closeOnClick: 'true'
   });

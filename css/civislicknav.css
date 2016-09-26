@@ -4,7 +4,10 @@
 
 .slicknav_menu {
   display: none;
-  background-color: black;
+}
+
+.slicknav_nav .slicknav_arrow {
+  font-family: "FontAwesome";
 }
 
 @media screen and (max-width: 50em) {
@@ -29,5 +32,8 @@
   }
   #root-menu-div div.outerbox {
     margin-top: 18px !important;
+  }
+  #civicrm-menu li a {
+    display: inline-block;
   }
 }
