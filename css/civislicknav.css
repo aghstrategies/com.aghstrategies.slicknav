@@ -9,6 +9,10 @@
 .slicknav_nav .slicknav_arrow {
   font-family: "FontAwesome";
 }
+body .slicknav_nav a:hover,
+body .slicknav_nav .slicknav_row:hover {
+  background-color: #aaa;
+}
 
 @media screen and (max-width: 50em) {
   .menumain:not(#crm-qsearch) {
