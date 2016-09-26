@@ -14,7 +14,7 @@ li.slicknav_collapsed.slicknav_parent:nth-child(2) {
   background-color: black;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 60em) {
   .menumain:not(#crm-qsearch) {
     display: none;
   }

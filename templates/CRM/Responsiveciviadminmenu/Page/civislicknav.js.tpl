@@ -10,10 +10,6 @@ CRM.$(function($) {
     // closedSymbol: '&#xf078;',
     // removeIds: 'true',
     appendTo: '#civicrm-menu',
-    // duplicate: 'false',
-    // allowParentLinks: 'TRUE',
-    // nestedParentLinks: 'true',
-    // easingOpen: 'easeOutBounce',
     closeOnClick: 'true'
   });
 });
