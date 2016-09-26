@@ -12,4 +12,5 @@ Things to do:
 + use font awesome chevron arrows for open and close
 + style slightly
 + full width or 97%?
-+ search dropdown when small
++ search dropdown when small position
++ get width of menu div on resize and compare to window.

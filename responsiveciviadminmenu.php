@@ -1,11 +1,10 @@
 <?php
 
 require_once 'responsiveciviadminmenu.civix.php';
-CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.responsiveciviadminmenu', 'SlickNav-master/dist/jquery.slicknav.js', 0, 'html-header');
+CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.responsiveciviadminmenu', 'js/jquery.slicknav.js', 0, 'html-header');
 CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.responsiveciviadminmenu', 'js/slicknav.js');
-CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.responsiveciviadminmenu', 'SlickNav-master/dist/slicknav.css');
+CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.responsiveciviadminmenu', 'css/slicknav.css');
 CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.responsiveciviadminmenu', 'css/civislicknav.css');
-
 
 /**
  * Implements hook_civicrm_config().
