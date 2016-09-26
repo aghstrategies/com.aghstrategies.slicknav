@@ -1,10 +1,3 @@
-
-/*hiding first two items of slicknavmenu because we will use og menu*/
-li.slicknav_collapsed.slicknav_parent:nth-child(1),
-li.slicknav_collapsed.slicknav_parent:nth-child(2) {
-  display: none;
-}
-
 .slicknav_nav li.menumain {
   float: none;
 }
@@ -14,7 +7,7 @@ li.slicknav_collapsed.slicknav_parent:nth-child(2) {
   background-color: black;
 }
 
-@media screen and (max-width: 60em) {
+@media screen and (max-width: 50em) {
   .menumain:not(#crm-qsearch) {
     display: none;
   }
@@ -26,10 +19,13 @@ li.slicknav_collapsed.slicknav_parent:nth-child(2) {
 		display:block;
 	}
   #civicrm-menu #crm-qsearch input {
-    height: 2em;
-    margin-top: .5em;
+    height: 1.9em;
+    margin-top: .65em;
+    margin-left: .5em;
     width: 12em !important;
     border-radius: 2px;
+    padding-left: .5em;
+    background-position: right -22px;
   }
   #root-menu-div div.outerbox {
     margin-top: 18px !important;
