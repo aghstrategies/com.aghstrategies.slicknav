@@ -1,0 +1,27 @@
+
+/*hiding first two items of slicknavmenu because we will use og menu*/
+li.slicknav_collapsed.slicknav_parent:nth-child(1),
+li.slicknav_collapsed.slicknav_parent:nth-child(2) {
+  display: none;
+}
+
+.slicknav_nav li.menumain {
+  float: none;
+}
+
+.slicknav_menu {
+  display: none;
+  background-color: black;
+}
+
+@media screen and (max-width: 40em) {
+.menumain:not(#crm-qsearch):not(.crm-link-home) {
+  display: none;
+}
+  #civicrm-menu {
+    height: auto;
+  }
+	.slicknav_menu {
+		display:block;
+	}
+}
