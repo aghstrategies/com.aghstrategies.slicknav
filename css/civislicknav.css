@@ -8,13 +8,29 @@
 
 .slicknav_nav .slicknav_arrow {
   font-family: "FontAwesome";
+  /*float: right;*/
 }
 body .slicknav_nav a:hover,
 body .slicknav_nav .slicknav_row:hover {
   background-color: #aaa;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+}
+
+body .slicknav_nav .slicknav_row,
+body .slicknav_nav a {
+	padding: 10px 10px;
+	margin: 0px 5px 0px 2px;
 }
 
 @media screen and (max-width: 50em) {
+  /*overides for civicrm joomla css*/
+  ul#civicrm-menu {
+    height: auto;
+    padding: 0px !important;
+  }
+
   .menumain:not(#crm-qsearch) {
     display: none;
   }
@@ -24,7 +40,7 @@ body .slicknav_nav .slicknav_row:hover {
   }
   #civicrm-menu.crm-slickmenu-open {
     position: absolute !important;
-    top: 0;
+    /*top: 0;*/
   }
 	.slicknav_menu {
 		display:block;
@@ -43,5 +59,12 @@ body .slicknav_nav .slicknav_row:hover {
   }
   #civicrm-menu li a {
     display: inline-block;
+    border-bottom: 1px solid grey;
+    width: 97%;
+  }
+  #civicrm-menu li a a {
+    display: inline-block;
+    border-bottom: none;
+    width: auto;
   }
 }
