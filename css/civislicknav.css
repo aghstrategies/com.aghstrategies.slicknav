@@ -59,7 +59,7 @@ body .slicknav_nav a {
   }
   #civicrm-menu li a {
     display: inline-block;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #595959;
     width: 97%;
   }
   #civicrm-menu li a a {
