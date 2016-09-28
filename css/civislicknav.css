@@ -28,7 +28,7 @@ body .slicknav_nav a {
   /*overides for civicrm joomla css*/
   ul#civicrm-menu {
     height: auto;
-    padding: 0px !important;
+    padding: 0 !important;
   }
 
   .menumain:not(#crm-qsearch) {
@@ -45,11 +45,14 @@ body .slicknav_nav a {
 	.slicknav_menu {
 		display:block;
 	}
+  #crm-qsearch {
+    width: 75%;
+  }
   #civicrm-menu #crm-qsearch input {
     height: 1.9em;
     margin-top: .65em;
     margin-left: .5em;
-    width: 12em !important;
+    width: 100% !important;
     border-radius: 2px;
     padding-left: .5em;
     background-position: right -22px;
