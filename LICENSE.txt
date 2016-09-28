@@ -1,4 +1,4 @@
-Package: com.aghstrategies.responsiveciviadminmenu
+Package: com.aghstrategies.slicknav
 Copyright (C) 2016, AGH Strategies <alice@aghstrategies.com>
 Licensed under the GNU Affero Public License 3.0 (below).
 

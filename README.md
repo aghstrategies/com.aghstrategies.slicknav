@@ -9,7 +9,7 @@ Things to do:
 + rename
 + publish
 + Making it work in CiviCRM 4.6
-  + Internalization bug: PHP Fatal error: Call to undefined method CRM_Core_I18n::getLocale() in /com.aghstrategies.responsiveciviadminmenu/responsiveciviadminmenu.php on line 26 (will run but not automatically change the language if you comment out this line)
+  + Internalization bug: PHP Fatal error: Call to undefined method CRM_Core_I18n::getLocale() in /com.aghstrategies.slicknav/slicknav.php on line 26 (will run but not automatically change the language if you comment out this line)
   + Font Awesome not in 4.6 so Icons do not load properly. can be removed if you comment out these two lines "openedSymbol:'&#xf078;',
       closedSymbol: '&#xf054;'," in civislicknav.js.tpl the icons will revert to triangles
 

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<extension key="com.aghstrategies.responsiveciviadminmenu" type="module">
-  <file>responsiveciviadminmenu</file>
+<extension key="com.aghstrategies.slicknav" type="module">
+  <file>slicknav</file>
   <name>Responsive CiviCRM Administration Menu</name>
   <description>Makes the CiviCRM Administration Menu web responsive.</description>
   <license>AGPL-3.0</license>
@@ -22,6 +22,6 @@
   </compatibility>
   <comments>This is a new, undeveloped module</comments>
   <civix>
-    <namespace>CRM/Responsiveciviadminmenu</namespace>
+    <namespace>CRM/Slicknav</namespace>
   </civix>
 </extension>
