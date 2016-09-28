@@ -2,20 +2,19 @@
 <extension key="com.aghstrategies.slicknav" type="module">
   <file>slicknav</file>
   <name>Responsive CiviCRM Administration Menu</name>
-  <description>Makes the CiviCRM Administration Menu web responsive.</description>
+  <description>Uses the Slicknav jquery plugin to make the CiviCRM administration menu web responsive.</description>
   <license>AGPL-3.0</license>
   <maintainer>
     <author>AGH Strategies</author>
     <email>alice@aghstrategies.com</email>
   </maintainer>
   <urls>
-    <url desc="Main Extension Page">http://FIXME</url>
-    <url desc="Documentation">http://FIXME</url>
-    <url desc="Support">http://FIXME</url>
+    <url desc="Main Extension Page">https://civicrm.org/extensions/slicknav-web-responsive-admin-menu</url>
+    <url desc="Documentation">https://github.com/aghstrategies/com.aghstrategies.slicknav</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
   <releaseDate>2016-09-25</releaseDate>
-  <version>1.0</version>
+  <version>v1.0</version>
   <develStage>alpha</develStage>
   <compatibility>
     <ver>4.7.10</ver>
