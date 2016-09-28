@@ -1,18 +1,21 @@
 This Extension
 --------------
 
-Uses the jquery plugin [slicknav](http://slicknav.com/) to make the CiviCRM administration menu web responsive on mobile.
+Uses the jquery plugin [slicknav](http://slicknav.com/) to make the CiviCRM administration menu web responsive.
 
-Things to do:
+Currently there is one breakpoint at 50em.
 
-+ update readme
-+ rename
-+ publish
-+ Making it work in CiviCRM 4.6
-  + Internalization bug: PHP Fatal error: Call to undefined method CRM_Core_I18n::getLocale() in /com.aghstrategies.slicknav/slicknav.php on line 26 (will run but not automatically change the language if you comment out this line)
-  + Font Awesome not in 4.6 so Icons do not load properly. can be removed if you comment out these two lines "openedSymbol:'&#xf078;',
-      closedSymbol: '&#xf054;'," in civislicknav.js.tpl the icons will revert to triangles
+![screenshot of responsive menu in action](/slicknavmenu.png)
 
-Possible future things:
+#### Making it work in CiviCRM 4.6
++ Comment out line 26 of com.aghstrategies.slicknav/slicknav.php (`$lang = CRM_Core_I18n::getLocale()`) to fix the  Fatal error: Call to undefined method $lang = CRM_Core_I18n::getLocale() in /com.aghstrategies.slicknav/slicknav.php on line 26
++ Font Awesome is not in 4.6 so the open and close icons in this extension do not load properly. They can be removed if you comment out these two lines in templates/CRM/Slicknav/Page/civislicknav.js.tpl
 
-+ compare length of menu items to width of window and change based on that instead of automatically at 50em
+```js
+openedSymbol:'&#xf078;',
+closedSymbol: '&#xf054;',
+```
+
+#### Possible future things:
+
++ Compare length of menu items to width of window and change to small screen menu based on that instead of automatically at 50em
