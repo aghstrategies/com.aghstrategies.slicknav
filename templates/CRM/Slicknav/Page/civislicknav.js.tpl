@@ -3,7 +3,7 @@
 CRM.$(function($) {
   var navMarkup = {/literal}{$navigation|@json_encode}{literal};
   $('<ul>' + navMarkup + '</ul>').slicknav({
-    label: '',
+    label: '<img src="' + CRM.config.resourceBase + 'i/logo16px.png">',
     removeClasses: 'true',
     removeStyles: 'true',
     openedSymbol:'&#xf078;',
