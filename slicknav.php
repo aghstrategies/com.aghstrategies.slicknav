@@ -19,14 +19,20 @@ function slicknav_civicrm_coreResourceList($list, $region) {
     $contactID = CRM_Core_Session::getLoggedInContactID();
     if ($contactID) {
       CRM_Core_Resources::singleton()->addScriptFile('com.aghstrategies.slicknav', 'slicknav/dist/jquery.slicknav.min.js', 0, 'html-header');
-      CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.slicknav', 'slicknav/dist/slicknav.min.css');
-      CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.slicknav', 'css/civislicknav.css');
+      CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.slicknav', 'slicknav/dist/slicknav.min.css', 0, 'html-header');
+      CRM_Core_Resources::singleton()->addStyleFile('com.aghstrategies.slicknav', 'css/civislicknav.css', 1, 'html-header');
 
       // These params force the browser to refresh the js file when switching user, domain, or language
-      $lang = CRM_Core_I18n::getLocale();
+      if (is_callable(array('CRM_Core_I18n', 'getLocale'))) {
+        $tsLocale = CRM_Core_I18n::getLocale();
+      }
+      // 4.6 compatibility
+      else {
+        global $tsLocale;
+      }
       $domain = CRM_Core_Config::domainID();
       $key = CRM_Core_BAO_Navigation::getCacheKey($contactID);
-      $src = CRM_Utils_System::url("civicrm/ajax/responsiveadminmenu/$contactID/$lang/$domain/$key");
+      $src = CRM_Utils_System::url("civicrm/ajax/responsiveadminmenu/$contactID/$tsLocale/$domain/$key", 1, 'html-header');
       CRM_Core_Resources::singleton()->addScriptUrl($src);
     }
   }

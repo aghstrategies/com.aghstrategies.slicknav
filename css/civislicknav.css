@@ -6,10 +6,6 @@
   display: none;
 }
 
-.slicknav_nav .slicknav_arrow {
-  font-family: "FontAwesome";
-  /*float: right;*/
-}
 body .slicknav_nav a:hover,
 body .slicknav_nav .slicknav_row:hover {
   background-color: #aaa;
@@ -40,7 +36,6 @@ body .slicknav_nav a {
   }
   #civicrm-menu.crm-slickmenu-open {
     position: absolute !important;
-    /*top: 0;*/
   }
 	.slicknav_menu {
 		display:block;

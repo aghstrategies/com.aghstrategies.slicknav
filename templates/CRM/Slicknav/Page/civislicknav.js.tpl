@@ -6,8 +6,6 @@ CRM.$(function($) {
     label: '<img src="' + CRM.config.resourceBase + 'i/logo16px.png">',
     removeClasses: 'true',
     removeStyles: 'true',
-    openedSymbol:'&#xf078;',
-    closedSymbol: '&#xf054;',
     appendTo: '#civicrm-menu',
     closeOnClick: 'true',
     beforeOpen: function() {

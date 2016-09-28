@@ -17,7 +17,8 @@
   <version>1.1</version>
   <develStage>stable</develStage>
   <compatibility>
-    <ver>4.7.10</ver>
+    <ver>4.6</ver>
+    <ver>4.7</ver>
   </compatibility>
   <civix>
     <namespace>CRM/Slicknav</namespace>
