@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <extension key="com.aghstrategies.slicknav" type="module">
   <file>slicknav</file>
-  <name>Responsive CiviCRM Administration Menu</name>
+  <name>Slicknav - web responsive admin menu</name>
   <description>Uses the Slicknav jquery plugin to make the CiviCRM administration menu web responsive.</description>
   <license>AGPL-3.0</license>
   <maintainer>
