@@ -66,3 +66,8 @@ body .slicknav_nav a {
     width: auto;
   }
 }
+/* Fix for CiviCRM < 4.7.13 */
+#civicrm-menu #crm-qsearch {
+  background: transparent !important;
+  border-right: 0;
+}
