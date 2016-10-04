@@ -20,7 +20,7 @@ body .slicknav_nav a {
 	margin: 0px 5px 0px 2px;
 }
 
-@media screen and (max-width: 50em) {
+@media screen and (max-device-width: 50em), screen and (max-width: 50em) {
   /*overides for civicrm joomla css*/
   ul#civicrm-menu {
     height: auto;
