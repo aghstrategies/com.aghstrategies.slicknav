@@ -71,3 +71,54 @@ body .slicknav_nav a {
   background: transparent !important;
   border-right: 0;
 }
+
+/* WordPress compatibility */
+@media screen and (max-device-width: 50em), screen and (max-width: 50em) {
+  body.wp-admin .slicknav_menu {
+    padding: 0;
+  }
+  body.wp-admin .slicknav_btn {
+    margin: 5px 5px 5px 0;
+  }
+  body.wp-admin #civicrm-menu #crm-qsearch input {
+    margin-top: 5px;
+  }
+  html>body #root-menu-div div.outerbox:first-child {
+    margin-top: 10px !important;
+  }
+}
+
+/* The WordPress admin menu uses this breakpoint */
+@media screen and (max-width: 782px) {
+  /* Expose the WordPress hamburger to navigate away from CiviCRM */
+  body.wp-admin #civicrm-menu {
+    width: 92% !important;
+    width: -webkit-calc(100% - 52px) !important;
+    width: -moz-calc(100% - 52px) !important;
+    width: calc(100% - 52px) !important;
+    left: 8%;
+    left: -webkit-calc(52px) !important;
+    left: -moz-calc(52px) !important;
+    left: calc(52px) !important;
+  }
+  body.wp-admin .slicknav_menu {
+    min-height: 46px;
+  }
+  body.wp-admin .slicknav_btn {
+    margin-top: 7px;
+  }
+  body.wp-admin #civicrm-menu #crm-qsearch {
+    padding: 0 !important;
+    width: 92% !important;
+    width: -webkit-calc(100% - 70px) !important;
+    width: -moz-calc(100% - 70px) !important;
+    width: calc(100% - 70px) !important;
+  }
+  body.wp-admin #civicrm-menu #crm-qsearch input {
+    margin-top: 7px;
+    width: 84% !important;
+  }
+  html>body #root-menu-div div.outerbox:first-child {
+    margin-top: 12px !important;
+  }
+}
