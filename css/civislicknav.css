@@ -118,7 +118,7 @@ body .slicknav_nav a {
     margin-top: 7px;
     width: 84% !important;
   }
-  html>body #root-menu-div div.outerbox:first-child {
+  html>body.wp-admin #root-menu-div div.outerbox:first-child {
     margin-top: 12px !important;
   }
 }
