@@ -83,7 +83,7 @@ body .slicknav_nav a {
   body.wp-admin #civicrm-menu #crm-qsearch input {
     margin-top: 5px;
   }
-  html>body #root-menu-div div.outerbox:first-child {
+  html>body.wp-admin #root-menu-div div.outerbox:first-child {
     margin-top: 10px !important;
   }
 }
