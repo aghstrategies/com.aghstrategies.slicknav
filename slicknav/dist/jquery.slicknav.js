@@ -1,5 +1,5 @@
 /*!
- * SlickNav Responsive Mobile Menu v1.0.8
+ * SlickNav Responsive Mobile Menu v1.0.10
  * (c) 2016 Josh Cope
  * licensed under MIT
  */
@@ -33,7 +33,7 @@
             afterClose: function () {}
         },
         mobileMenu = 'slicknav',
-        prefix = 'slicknav';
+        prefix = 'slicknav',
 
         Keyboard = {
             DOWN: 40,
@@ -274,12 +274,12 @@
                     if (ev.keyCode !== Keyboard.DOWN || !$($this.btn).hasClass(prefix+'_open')){
                         $this._menuToggle();
                     }
-
+                    
                     $($this.btn).next().find('[role="menuitem"]').first().focus();
                     break;
             }
 
-
+            
         });
 
         $this.mobileNav.on('keydown', '.'+prefix+'_item', function(e) {
@@ -337,7 +337,7 @@
                     e.preventDefault();
                     $this._menuToggle();
                     $($this.btn).focus();
-                    break;
+                    break;    
             }
         });
 
@@ -407,7 +407,7 @@
         if (animate) {
             duration = settings.duration;
         }
-
+        
         function afterOpen(trigger, parent) {
             $(trigger).removeClass(prefix+'_animating');
             $(parent).removeClass(prefix+'_animating');
@@ -417,7 +417,7 @@
                 settings.afterOpen(trigger);
             }
         }
-
+        
         function afterClose(trigger, parent) {
             el.attr('aria-hidden','true');
             items.attr('tabindex', '-1');
@@ -447,7 +447,7 @@
                 });
             } else if(settings.animations === 'velocity') {
                 el.velocity("finish").velocity("slideDown", {
-                    duration: settings.duration,
+                    duration: duration,
                     easing: settings.easingOpen,
                     complete: function() {
                         afterOpen(trigger, parent);
@@ -470,9 +470,9 @@
                     afterClose(trigger, parent)
                 });
             } else if (settings.animations === 'velocity') {
-
+                
                 el.velocity("finish").velocity("slideUp", {
-                    duration: settings.duration,
+                    duration: duration,
                     easing: settings.easingClose,
                     complete: function() {
                         afterClose(trigger, parent);
