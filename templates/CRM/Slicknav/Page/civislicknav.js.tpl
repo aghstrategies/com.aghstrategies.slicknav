@@ -4,7 +4,7 @@ CRM.$(function($) {
   if ($('.slicknav_menu', '#civicrm-menu').length < 1) {
     var navMarkup = {/literal}{$navigation|@json_encode}{literal};
     $('<ul>' + navMarkup + '</ul>').slicknav({
-      label: '<img src="' + CRM.config.resourceBase + 'i/logo16px.png">',
+      label: '<img src="' + CRM.config.resourceBase + 'i/logo_sm.png">',
       removeClasses: 'true',
       removeStyles: 'true',
       appendTo: '#civicrm-menu',
